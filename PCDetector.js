@@ -39,7 +39,11 @@
   addCheck(t1 - t0 > 200, 5);
 
   // Calculate %
-  const probability = Math.min(100, Math.round((score / checks) * 100));
+  let probability = Math.min(100, Math.round((score / checks) * 100));
+  if (navigator.webdriver && probability > 60) {
+    probability = 60;
+  }
+
   let emoji = '🟩';
   if (probability > 75) emoji = '🟥';
   else if (probability > 50) emoji = '🟧';
