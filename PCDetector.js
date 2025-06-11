@@ -1,4 +1,5 @@
-<script>
+/* (C) Bork-it 2025-present. PCDetector.js 0.1.0*/
+/* MIT License */
 (function() {
   let score = 0;
   let checks = 0;
