@@ -65,4 +65,3 @@
 
   document.body.appendChild(bar);
 })();
-</script>
