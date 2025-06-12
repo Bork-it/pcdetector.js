@@ -16,8 +16,8 @@
   // Heuristic: Clipboard API access
   addCheck(!navigator.clipboard, 5);
 
-  // Heuristic: Known parental control keywords in DOM
-  const keywords = ['qustodio', 'bark', 'netnanny', 'familylink', 'securly', 'goguardian'];
+  // Heuristic: Known parental control keywords in DOM, currently only detects goguardian
+  const keywords = ['asset.goguardian', 'localstorage.goguardian'];
   const domText = document.documentElement.innerHTML.toLowerCase();
   const hits = keywords.filter(k => domText.includes(k)).length;
   addCheck(hits > 0, hits * 15);
